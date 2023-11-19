@@ -31,8 +31,6 @@ void ATank::BeginPlay()
 	Super::BeginPlay();
 
 	TankPlayerController = Cast<APlayerController>(GetController());
-
-
 }
 
 // Called every frame
@@ -53,6 +51,7 @@ void ATank::HandleDestruction()
 	Super::HandleDestruction();
 	SetActorHiddenInGame(true);
 	SetActorTickEnabled(false);
+	bAlive = false;
 }
 
 
